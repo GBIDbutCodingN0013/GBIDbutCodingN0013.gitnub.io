@@ -138,6 +138,30 @@
 
             <!-- Post Comments -->
             
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'PrD8Dp7dz0bIfwfzpAvCMK5o-gzGzoHsz',
+        app_key: 'Vs9W2EkMKVNWAQKEGJH9BMlg',
+        placeholder: '请留下你的足迹',
+        pageSize: '10',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
 
         </div>
         <!-- Copyright 版权 start -->
