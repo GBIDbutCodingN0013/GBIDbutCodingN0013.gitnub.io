@@ -128,11 +128,15 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >两种Controller注解遇到的小问题</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                
+                <h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><p>今天在跟着教程做即时通讯的项目的时候遇到了一个很怪的报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.web.servlet.resource.NoResourceFoundException: No static resource Im/group/Im/group/createGroup.</span><br></pre></td></tr></table></figure>
+<p>当时我就纳闷了，我这后端哪来的static resource啊<br>排查了半个小时后发现问题了</p>
+<h3 id="RestController和-Controller的区别"><a href="#RestController和-Controller的区别" class="headerlink" title="@RestController和@Controller的区别"></a>@RestController和@Controller的区别</h3><p>当时打注解的时候手快了直接打成了@Controller，而@Controller会返回一个视图名称，这肯定找不到啊，我这不是SpringMVC啊<br>把注解改了之后正常了。<br>我好蠢QwQ</p>
+
             </div>
 
             <!-- Post Comments -->
